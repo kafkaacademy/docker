@@ -15,6 +15,6 @@ RUN tar zxvf $kafka_file.tgz && rm $kafka_file.tgz && mv  $kafka_file /opt
 
 WORKDIR /opt/$kafka_file
 ADD ./files/config/* ./config
-ADD .files/bin/* ./
+ADD ./files/bin/* ./
 
 ENTRYPOINT ["/bin/bash", "./start.sh" ]
